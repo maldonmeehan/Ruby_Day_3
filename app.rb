@@ -33,10 +33,14 @@ end
 get('/rps_winner') do
 
   @player1 = params.fetch('player1')
+  @player1_name = "Player 1"
   @player2 = params.fetch('player2')
   comp_opts = ["rock", "paper", "scissors"]
   if @player2 == "none"
     @player2 = comp_opts[rand(0..2)]
+    @player2_name = "Computer"
+  else
+    @player2_name = "Player 2"
   end
 
   if @player1 == @player2
