@@ -1,7 +1,7 @@
 require('rspec')
 require('scrabble.rb')
 
-describe('Sting#scrabble') do
+describe('String#scrabble') do
   it("takes a lower sting and converts it to upper case") do
     expect(("a").scrabble()).to(eq(1))
   end
