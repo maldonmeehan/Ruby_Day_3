@@ -1,5 +1,5 @@
 class String
   define_method (:palindrome?) do
-    return true if self.downcase == self.downcase.reverse() 
+    self.downcase == self.downcase.reverse() ? true : false
   end
 end
