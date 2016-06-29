@@ -14,6 +14,13 @@ get('/palindrome') do
   erb(:palindrome)
 end
 
+post('/palindrome') do
+  word = params.fetch('word')
+  @result = (params.fetch('word').palindrome?()) ? "#{word} is a palindrome" : "#{word} is not a palindrome"
+  erb(:palindrome)
+end
+
+
 get('/palindrome_results') do
   word = params.fetch('word')
   @result = (params.fetch('word').palindrome?()) ? word + " is a palindrome" : word + " is not a palindrome"

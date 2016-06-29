@@ -1,5 +1,5 @@
 <h1>Welcome to palindrome checker</h1>
-<form action="/palindrome_results">
+<form action="/palindrome" method="post">
   <div class="form-group">
      <label for="word">Would you like to see if your word, phrase or sentence is a palindrome?
 </label>
@@ -7,3 +7,9 @@
   </div>
   <button type="submit" class="btn-success">Send</button>
 </form>
+<div class="results">
+  <% if @result %>
+    <h1>Your text...</h1>
+    <%= @result %>
+  <% end %>
+</div>
