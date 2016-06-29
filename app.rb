@@ -3,11 +3,24 @@ require('sinatra/reloader')
 require('./lib/title_case')
 require('./lib/scrabble')
 require('./lib/rock_paper_scissors')
+require('./lib/palindrome')
 also_reload('lib/**/*.rb')
 
 get('/') do
   erb(:index)
 end
+
+get('/palindrome') do
+  erb(:palindrome)
+end
+
+get('/palindrome_results') do
+  word = params.fetch('word')
+  @result = (params.fetch('word').palindrome?()) ? word + " is a palindrome" : word + " is not a palindrome"
+  erb(:palindrome_results)
+end
+
+
 get('/titlecase') do
   erb(:titlecase)
 end
