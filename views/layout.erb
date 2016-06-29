@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title><%= @page_title %></title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="<%= url('css/style.css') %>" rel="stylesheet">
@@ -26,14 +26,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Project name</a>
+          <a class="navbar-brand" href="/" id="home">Ruby Day 3</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/titlecase">Titlecase</a></li>
-            <li><a href="/scrabble">Scrabble</a></li>
-            <li><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
-            <li><a href="/palindrome">Palindrome</a></li>
+            <li id="titlecase"><a href="/titlecase">Titlecase</a></li>
+            <li id="scrabble"><a href="/scrabble">Scrabble</a></li>
+            <li id="rps"><a href="/rock_paper_scissors">Rock Paper Scissor</a></li>
+            <li id="palindrome"><a href="/palindrome">Palindrome</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -46,5 +46,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="<%= url('js/script.js') %>"></script>
   </body>
 </html>
