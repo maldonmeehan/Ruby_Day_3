@@ -1,0 +1,22 @@
+<h1>Welcome to the Word Swapper</h1>
+<form action="/find_and_replace" method="post">
+  <div class="form-group">
+     <label for="phrase">Enter a phrase or sentence</label>
+     <input id="phrase" name="phrase" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="from">Enter a phrase or sentence</label>
+     <input id="from" name="from" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+     <label for="to">Enter a phrase or sentence</label>
+     <input id="to" name="to" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-success">Send</button>
+</form>
+<div class="results">
+  <% if @result %>
+    <h1>Here's your swapped text:</h1>
+    <%= @result %>
+  <% end %>
+</div>

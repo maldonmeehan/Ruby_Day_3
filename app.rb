@@ -4,11 +4,23 @@ require('./lib/title_case')
 require('./lib/scrabble')
 require('./lib/rock_paper_scissors')
 require('./lib/palindrome')
+require('./lib/find_and_replace')
 also_reload('lib/**/*.rb')
 
 get('/') do
   @page_title="home"
   erb(:index)
+end
+
+get('/find_and_replace') do
+  @page_title = "find_and_replace"
+  erb(:find_and_replace)
+end
+
+post('/find_and_replace') do
+  @page_title = "find_and_replace"
+  @result = params.fetch('phrase').find_and_replace(params.fetch('from'), params.fetch('to'))
+  erb(:find_and_replace)
 end
 
 get('/palindrome') do
